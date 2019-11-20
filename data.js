@@ -36,10 +36,16 @@ connections = {
         ["Lima", "Quito"],
         ["Montecarlo", "Quito"],
         ["Montecarlo", "North Bogota"],
+        ["London", "Norwich"],
+        ["London", "Wales"],
+        ["Dublin", "Wales"],
+        ["Glasgow", "Wales"],
+        ["New York", "Wales"],
     ],
     "nether_ice": [
 
         ["Amerindien", "North Bogota"],
+        ["Addis Ababa", "North Bogota"],
         ["Amerindien", "Aruba"],
         ["Amerindien", "Maralago"],
         ["Aruba", "Maralago"],
