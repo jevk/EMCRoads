@@ -81,5 +81,8 @@ function pathfind(from, to) {
 
         iter++
     }
+    if (to == undefined) {
+        return undefined
+    }
     return getPath(to.tooltipText)
 }
