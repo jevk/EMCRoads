@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="utf-8">
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="mapSeries.js"></script>
+<script src="data.js"></script>
+<script src="pathfind.js"></script>
+<script src="howDoIGo.js"></script>
+<script>
+am4core.ready(function() {
+loadChart()
+loadData()
+Object.keys(connections).forEach(function(k, i) {
+    
+    for (let i = 0; i < connections[k].length; i++) {
+        addLine(citiesL[connections[k][i][0]], citiesL[connections[k][i][1]], k)
+    }
+});
+
+})
+
+
+</script>
+    <title></title>
+</head>
+<body>
+<div id="chartdiv"></div>
+<div id="control-panel">
+    <input type="text" id="from" name="" placeholder="Where are you?">
+    <input type="text" id="to"   name="" placeholder="Where do you want to go?">
+    <button onclick="how_do_i_go()">Pathfind</button>
+</div>
+</body>
+</html>
