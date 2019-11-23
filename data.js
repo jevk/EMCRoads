@@ -36,21 +36,23 @@ connections = {
         ["Lima", "Quito"],
         ["Montecarlo", "Quito"],
         ["Montecarlo", "North Bogota"],
+
         ["London", "Norwich"],
         ["London", "Wales"],
         ["Dublin", "Wales"],
         ["Glasgow", "Wales"],
         ["New York", "Wales"],
+
         ["Summit Station", "LE2CASSETOUTcity"],
         ["Summit Station", "FortIce"],
         ["Summit Station", "ritenbenk"],
         ["Summit Station", "Narvik"],
         ["Summit Station", "Tasiilaq"],
+
         ["Nya Asgard", "Visby"],
         ["Nya Asgard", "Dread-Fort"],
         ["Nya Asgard", "Kongsvinger"],
         ["Hardanger", "Kongsvinger"],
-
         ["BlackFall", "Visby"],
         ["BlackFall", "Hiiumaa"],
         ["BlackFall", "Arensburg"],
@@ -60,6 +62,8 @@ connections = {
         ["Hiiumaa", "Tallinn"],
         ["FixedMines", "Tallinn"],
         ["FixedMines", "Sillamae"],
+
+        ["Glacier Town", "Gondwana"],
     ],
     "nether_ice": [
         ["Amerindien", "North Bogota"],
