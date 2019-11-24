@@ -22,7 +22,12 @@ loadData()
 Object.keys(connections).forEach(function(k, i) {
     
     for (let i = 0; i < connections[k].length; i++) {
-        addLine(citiesL[connections[k][i][0]], citiesL[connections[k][i][1]], k)
+        p0 = citiesL[connections[k][i][0]]
+        p1 = citiesL[connections[k][i][1]]
+        if (p1 == undefined || p0 == undefined) {
+            continue
+        }
+        addLine(p0, p1, k)
     }
 });
 
