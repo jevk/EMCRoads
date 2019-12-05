@@ -22,7 +22,7 @@ function how_do_i_go() {
         s += `<div class="path-item" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: ${i * 2 + 2}; grid-row-end: ${i * 2 + 4}">${to[0]}</div>`
     }
     for (var i = 0; i < l.length; i++) {
-        l[i] = l[i][0].tooltipText
+        l[i] = l[i][0]
     }
     fracs = fracs.slice(2)
     total = 0
