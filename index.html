@@ -25,14 +25,16 @@ Object.keys(connections).forEach(function(k, i) {
         p0 = citiesL[connections[k][i][0]]
         p1 = citiesL[connections[k][i][1]]
         if (p1 == undefined || p0 == undefined) {
+            console.log("Can't make " + connections[k][i][0] + " to " + connections[k][i][1])
             continue
         }
         addLine(p0, p1, k)
     }
 });
 
-})
 
+control_open()
+})
 
 </script>
     <title></title>
@@ -40,11 +42,15 @@ Object.keys(connections).forEach(function(k, i) {
 <body>
 <div id="chartdiv"></div>
 <div id="control-panel">
+    <button onclick="control_close()" id="control-hide">Hide</button>
     <input type="text" id="from" name="" placeholder="Where are you?">
+    <br>
     <input type="text" id="to"   name="" placeholder="Where do you want to go?">
+    <br>
     <button onclick="how_do_i_go()">Pathfind</button>
     <button onclick="clear_path()">Clear</button>
-    <span id="result"></span>
+    <div id="result"></div>
 </div>
+<button id="control-show" onclick="control_open()">Show</button>
 </body>
 </html>

@@ -4,8 +4,8 @@ function addLine(from, to, type) {
     line.line.controlPointDistance = 0;
     line.route = [from, to]
     line.id = to.tooltipText + '^' + from.tooltipText
-    from.connections.push([to, getDistance(from, to), from])
-    to.connections.push([from, getDistance(from, to), to])
+    from.connections.push([to, getDistance(from, to) / speedObj[type], from, type])
+    to.connections.push([from, getDistance(from, to) / speedObj[type], to, type])
     from.connections.sort((el1, el2) => el1[1] > el2[1])
     to.connections.sort((el1, el2) => el1[1] > el2[1])
     return line;
@@ -52,14 +52,14 @@ function pathfind(from, to) {
         var distanceToThat = distanceToThis + conn[1]
         if (!containsObject(conn[0].tooltipText, Object.keys(traversed)))  {
             traversed[conn[0].tooltipText] = distanceToThat
-            cameFrom[conn[0].tooltipText] = conn[2].tooltipText
+            cameFrom[conn[0].tooltipText] = [conn[2].tooltipText, conn[3], conn[1]]
             if (to == conn[0]) {
                 function getPath(conn, i) {
                     if (conn == from.tooltipText) {
                         return []
                     } else {
-                        l = getPath(cameFrom[conn], i + 1)
-                        l.push(conn)
+                        l = getPath(cameFrom[conn][0], i + 1)
+                        l.push(cameFrom[conn])
                         return l
                     }
                 }
@@ -71,9 +71,9 @@ function pathfind(from, to) {
                 
             }
             minDistance = distanceToThat
-            path.push(conn[0])
+            path.push([conn[0], conn[3]])
             for (var i = 0; i < conn[0].connections.length; i++) {
-                possibleExits.push([conn[0].connections[i][0], conn[0].connections[i][1] +distanceToThat, conn[0]])
+                possibleExits.push([conn[0].connections[i][0], conn[0].connections[i][1] +distanceToThat, conn[0], conn[0].connections[i][3]])
             }
             path.pop()
         }
@@ -84,5 +84,8 @@ function pathfind(from, to) {
     if (to == undefined) {
         return undefined
     }
-    return getPath(to.tooltipText)
+    var r = getPath(to.tooltipText)
+    console.log(conn)
+    r.push([conn[0].tooltipText, conn[3], conn[1]])
+    return r
 }

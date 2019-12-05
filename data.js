@@ -29,9 +29,10 @@ connections = {
         ["Santiago", "Arica"],
         ["Resistencia", "SantaCruz Sierra", "FranchuFranchu"],
         ["Manna", "SantaCruz Sierra", "FranchuFranchu"],
-        ["Manna", "Alteria", "FranchuFranchu"],
-        ["Alteria", "SantaCruz Sierra", "FranchuFranchu"],
-        ["Alteria", "Arica", "FranchuFranchu"],
+        // ["Manna", "Alteria", "FranchuFranchu"],
+        //["Alteria", "SantaCruz Sierra", "FranchuFranchu"],
+        //["Alteria", "Arica", "FranchuFranchu"], // Alteria is no more
+        ["Manna", "Arica", "FranchuFranchu"],
         ["Lima", "Arica"],
         ["Lima", "Quito"],
         ["Montecarlo", "Quito"],
@@ -85,12 +86,63 @@ connections = {
         ["Ahmedabad", "Cheylon"],
 
         ["Autumnshire", "Amarok", "DMKBoyz, Dictioo, BlueSupreme"],
+
+        // Australian network
+        ["Uluru-Kata Tjuta", "Port Forest"],
+        ["EndoCMouth", "Port Forest"],
+        ["EndoCMouth", "Perth"],
+        ["EndoCMouth", "Magadan"],
+        ["agentm", "Magadan"],
+
+        ["Uluru-Kata Tjuta", "Wells"],
+        ["Uluru-Kata Tjuta", "Banana"],
+        ["Port Hedland", "Banana"],
+        ["TheGoldenCity", "Banana"],
+        ["Uluru-Kata Tjuta", "UnityCity"],
+        ["Uluru-Kata Tjuta", "FrenchCity"],
+        ["Lcal Australia", "UnityCity"],
+        ["Lcal Australia", "Modern City"],
+        ["Lcal Australia", "Byzance"],
+        ["FortEmu", "Byzance"],
+        ["FortEmu", "FuzeCity"],
+        ["Ballarat", "FuzeCity"],
+        ["Ballarat", "Celestown"],
+        ["Tramadol", "Celestown"],
+        ["Tramadol", "Valais"],
+        ["Daestya", "Modern City"],
+        ["Daestya", "Suzaku"],
+        ["Ballarat", "Celestia"],
+        ["Zetta", "Celestia"],
+        ["Zetta", "Brisbane"],
+
+
+        ["Ballarat", "Suplex City"],
+        ["Faromix", "Suplex City"],
+        ["Faromix", "Ezaria"],
+        ["Oasis", "Ezaria"],
+
+        ["Faromix", "SerrasMind"],
+        ["Northern Rivers", "SerrasMind"],
+        ["Faromix", "Northern Rivers"],
+
+        ["Megapolis", "Port Forest"],
+        ["Megapolis", "Saladville"],
+        ["Weet-Bix", "Saladville"],
+        ["Weet-Bix", "Galactrice"],
+        ["Fortown", "Galactrice"],
+        ["Fortown", "Moudon"],
+	
+	    ["Novasulfuria", "Buenos Aires"],
+
+
+        // End of australian network
     ],
     "nether_ice": [
         ["Amerindien", "North Bogota"],
         ["Addis Ababa", "North Bogota"],
         ["Amerindien", "Aruba"],
         ["Amerindien", "Maralago"],
+        ["Amerindien", "Caribe Bay"],
         ["Aruba", "Maralago"],
         ["Maralago", "Caribe Bay"],
         ["Carupano", "Caribe Bay"],
@@ -133,4 +185,13 @@ lineSeries["nether_ice"].mapLines.template.line.strokeDasharray = "2 1"
 lineSeries["nether_ice"].mapLines.template.line.nonScalingStroke = true;
 lineSeries["nether_ice"].zIndex = 10;
 
+speedObj = {
+    "walk": 4.3,
+    "train": 8,
+    "nether_train": 64,
+    "water": 8,
+    "ice": 40,
+    "nether_ice": 320,
+
+    }
 }
