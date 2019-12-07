@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "Conflicts",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Iberian War", "description": "Spain declared war on former ally Portugal in early November, starting the Iberian War. The regional powers soon intervened on the side of Portugal, followed by an announcement of Portuguese support from the German Empire." }, "geometry": { "type": "Point", "coordinates": [ -7.0675294, 40.0620207 ] } },
+{ "type": "Feature", "properties": { "Name": "East Coast War", "description": "New York forces are on the defensive as Virginia, LacusMagnia, USA, Colombia and Carolina fight a brutal war on the US's eastern shores." }, "geometry": { "type": "Point", "coordinates": [ -73.9531818, 40.9026854 ] } }
+]
+}

@@ -149,6 +149,10 @@ connections = {
         ["Carupano", "Trinidad-Tobago"],
         ["Leeward Islands", "Trinidad-Tobago"],
         ["Rio De Janeiro", "SantaCruz Sierra"],
+    ],
+    "wip_ice": [
+    ],
+    "wip_nether_ice": [
     ]
 }
 
@@ -170,21 +174,31 @@ lineSeries = {
     "ice": chart.series.push(new am4maps.MapLineSeries()),
     "nether_ice": chart.series.push(new am4maps.MapLineSeries()),
 }
+
+lineAttrs = {
+    "ice": {
+        stroke: "#286a91"
+    },
+    "nether_ice": {
+        stroke: "#FF0000"
+    }
+}
 // Add lines
 
-lineSeries["ice"].mapLines.template.line.strokeWidth = 2;
-lineSeries["ice"].mapLines.template.line.strokeOpacity = 1;
-lineSeries["ice"].mapLines.template.line.stroke = city.fill;
-lineSeries["ice"].mapLines.template.line.strokeDasharray = "2 1"
-lineSeries["ice"].mapLines.template.line.nonScalingStroke = true;
-lineSeries["ice"].zIndex = 10;
-lineSeries["nether_ice"].mapLines.template.line.strokeWidth = 2;
-lineSeries["nether_ice"].mapLines.template.line.strokeOpacity = 1;
-lineSeries["nether_ice"].mapLines.template.line.stroke = "#EE1111";
-lineSeries["nether_ice"].mapLines.template.line.strokeDasharray = "2 1"
-lineSeries["nether_ice"].mapLines.template.line.nonScalingStroke = true;
-lineSeries["nether_ice"].zIndex = 10;
-
+for (var i = 0; i < Object.keys(lineAttrs).length; i++) {
+    var k = Object.keys(lineAttrs)[i]
+    lineSeries[k].mapLines.template.line.strokeWidth = 2;
+    lineSeries[k].mapLines.template.line.strokeOpacity = 1;
+    lineSeries[k].mapLines.template.line.stroke = "#000000";
+    lineSeries[k].mapLines.template.line.strokeDasharray = "2 1"
+    lineSeries[k].mapLines.template.line.nonScalingStroke = true;
+    lineSeries[k].zIndex = 10;
+    for (var j = 0; j < Object.keys(lineAttrs[k]).length; j++) {
+        var key = Object.keys(lineAttrs[Object.keys(lineAttrs)[i]])[j]
+        var val = lineAttrs[Object.keys(lineAttrs)[i]][key]
+        lineSeries[k].mapLines.template.line[key] = val
+    }
+}
 speedObj = {
     "walk": 4.3,
     "train": 8,

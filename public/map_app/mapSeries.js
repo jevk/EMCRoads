@@ -8,7 +8,8 @@ function loadChart() {
     MAP_SCALE = 3 / 550 
     // Create map instance
     chart = am4core.create("chartdiv", am4maps.MapChart);
-    chart.geodata = am4geodata_worldLow
+    loadGeodata()
+
     chart.projection = new am4maps.projections.Projection();
     chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
@@ -32,6 +33,8 @@ function loadChart() {
     city.fill = chart.colors.getIndex(0).brighten(-0.2);
     city.strokeWidth = 2;
     city.stroke = am4core.color("#fff");
+    console.log(am4geodata_worldLow["features"][28])
+    console.log(chart.geodata["features"][28])
 
 
     chart.zoomControl = new am4maps.ZoomControl();

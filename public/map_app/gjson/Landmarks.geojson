@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "Landmarks",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Forum of Constantine", "description": null }, "geometry": { "type": "Point", "coordinates": [ 27.8518011, 41.2491355 ] } },
+{ "type": "Feature", "properties": { "Name": "Gardens by the bay", "description": "A new site, the famous gardens by the bay are being constructed as you speak." }, "geometry": { "type": "Point", "coordinates": [ 104.1313741, 1.3842405 ] } },
+{ "type": "Feature", "properties": { "Name": "Mt Fuji", "description": "Mt Fuji has been protected by the Japanese citizens for a long time on the server" }, "geometry": { "type": "Point", "coordinates": [ 138.7318254, 35.4282963 ] } },
+{ "type": "Feature", "properties": { "Name": "Mt Everest", "description": "This landmark was first climbed by player Sulake, soon after server release." }, "geometry": { "type": "Point", "coordinates": [ 83.6822634, 28.7549973 ] } }
+]
+}
