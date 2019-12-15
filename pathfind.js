@@ -1,11 +1,15 @@
 function addLine(from, to, type) {
     var line = lineSeries[type].mapLines.create();
     line.imagesToConnect = [from, to];
+    var d = getDistance(from, to) / speedObj[type]
+    if (speedObj[type] == -1 )  {
+        d = -1
+    }
     line.line.controlPointDistance = 0;
     line.route = [from, to]
     line.id = to.tooltipText + '^' + from.tooltipText
-    from.connections.push([to, getDistance(from, to) / speedObj[type], from, type])
-    to.connections.push([from, getDistance(from, to) / speedObj[type], to, type])
+    from.connections.push([to, d, from, type])
+    to.connections.push([from, d, to, type])
     from.connections.sort((el1, el2) => el1[1] > el2[1])
     to.connections.sort((el1, el2) => el1[1] > el2[1])
     return line;
@@ -50,19 +54,14 @@ function pathfind(from, to) {
         var conn = possibleExits[iter]
 
         var distanceToThat = distanceToThis + conn[1]
+        if (conn[1] == -1) { // Not traversable
+            traversed[conn[0].tooltipText] = 6942
+        }
         if (!containsObject(conn[0].tooltipText, Object.keys(traversed)))  {
+            console.log(conn[0].tooltipText)
             traversed[conn[0].tooltipText] = distanceToThat
             cameFrom[conn[0].tooltipText] = [conn[2].tooltipText, conn[3], conn[1]]
             if (to == conn[0]) {
-                function getPath(conn, i) {
-                    if (conn == from.tooltipText) {
-                        return []
-                    } else {
-                        l = getPath(cameFrom[conn][0], i + 1)
-                        l.push(cameFrom[conn])
-                        return l
-                    }
-                }
                 break;
             }
 
@@ -84,8 +83,24 @@ function pathfind(from, to) {
     if (to == undefined) {
         return undefined
     }
+    console.log(conn.tooltipText)
+    console.log(to.tooltipText, from.tooltipText, conn[0])
+    function getPath(conn, i) {
+        if (conn == from.tooltipText) {
+            return []
+        } else {
+            l = getPath(cameFrom[conn][0], i + 1)
+            l.push(cameFrom[conn])
+            return l
+        }
+    }
     var r = getPath(to.tooltipText)
     console.log(conn)
+    console.log(r)
+    if (r[1] != undefined && (r[1] == r[2] || r[1] == -1 )) {
+        // no path
+        return undefined;
+    }
     r.push([conn[0].tooltipText, conn[3], conn[1]])
     return r
 }

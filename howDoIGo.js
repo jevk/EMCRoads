@@ -3,23 +3,35 @@ function how_do_i_go() {
     var from = document.getElementById("from").value
     var to   = document.getElementById("to"  ).value
     var l = pathfind(citiesL[from], citiesL[to])
+    console.log(l)
     if (l == undefined) {
         document.getElementById("result").innerText = "Path not found"
+        document.getElementById("result").style.display = "block"
+        return;
     } else {
         s = ""
+        document.getElementById("result").innerText = ""
+        document.getElementById("result").style.display = "grid"
     }
     l.unshift([l[0][0], "foot"])
     fracs = []
     document.getElementById("result").style.gridTemplateRows = "1fr 1fr ".repeat(l.length)
     console.log(document.getElementById("result").style.gridTemplateRows)
+    s += `<div class="background-path-line none" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: ${i * 2 + 2}; grid-row-end: ${i * 2 + 3}"></div>`
     for (var i = 0; i < (l.length - 1); i++) {
         var from = l[i]
         var to = l[i + 1]
         SIZE_CONST = 0.1
         fracs.push(l[l.length - 1 - i][2] * SIZE_CONST)
         fracs.push(l[l.length - 1 - i][2] * SIZE_CONST)
-        s += `<div class="background-path-line ${from[1]}" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: ${i * 2 + 1}; grid-row-end: ${i * 2 + 3}"></div>`
-        s += `<div class="path-item" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: ${i * 2 + 2}; grid-row-end: ${i * 2 + 4}">${to[0]}</div>`
+        if (i == 0) {
+            s += `<div class="background-path-line ${from[1]}" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: ${i * 2 + 2}; grid-row-end: ${i * 2 + 3}"></div>`
+
+        } else {
+            s += `<div class="background-path-line ${from[1]}" style="grid-column-start: 1; grid-column-end: 2; grid-row-start: ${i * 2 + 1}; grid-row-end: ${i * 2 + 3}"></div>`
+        }
+        s += `<div clss="path-item" style="grid-column-start: 2; grid-column-end: 3; grid-row-start: ${i * 2 + 2}; grid-row-end: ${i * 2 + 4}">${to[0]}</div>`
+        
     }
     for (var i = 0; i < l.length; i++) {
         l[i] = l[i][0]
@@ -54,12 +66,7 @@ function how_do_i_go() {
 }
 
 function clear_path() {
-    Object.keys(lineSeries).forEach(function(k) {
-        lineSeries[k].mapLines.each(function (item) {
-        item.line.strokeDasharray = "2 1"
-        })
-        
-    });
+    updateMapLines()
     document.getElementById("result").innerHTML = ""
 }
 

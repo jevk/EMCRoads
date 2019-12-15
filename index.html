@@ -10,6 +10,8 @@
 <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <link rel="stylesheet" type="text/css" href="main.css">
 <script src="geodata.js"></script>
 <script src="mapSeries.js"></script>
@@ -41,15 +43,18 @@ control_open()
     <title></title>
 </head>
 <body>
-<div id="chartdiv"></div>
+<div id="chartdiv" hd></div>
 <div id="control-panel">
-    <button onclick="control_close()" id="control-hide">Hide</button>
-    <input type="text" id="from" name="" placeholder="Where are you?">
-    <br>
-    <input type="text" id="to"   name="" placeholder="Where do you want to go?">
-    <br>
-    <button onclick="how_do_i_go()">Pathfind</button>
-    <button onclick="clear_path()">Clear</button>
+    <div id="not-result">
+        <button onclick="control_close()" id="control-hide">Hide</button>
+        <input type="text" id="from" name="" placeholder="Where are you?" list="city_list">
+        <br>
+        <input type="text" id="to"   name="" placeholder="Where do you want to go?" list="city_list">
+        <datalist id="city_list"></datalist>
+        <br>
+        <button onclick="how_do_i_go()">Pathfind</button>
+        <button onclick="clear_path()">Clear</button>
+    </div>
     <div id="result"></div>
 </div>
 <button id="control-show" onclick="control_open()">Show</button>
