@@ -88,18 +88,22 @@ function pathfind(from, to) {
     function getPath(conn, i) {
         if (conn == from.tooltipText) {
             return []
-        } else {
-            l = getPath(cameFrom[conn][0], i + 1)
+        } else if (cameFrom[conn] == undefined) {
+            return false;
+        } 
+        // Else
+        l = getPath(cameFrom[conn][0], i + 1)
+        if (l !== false) {
             l.push(cameFrom[conn])
-            return l
         }
+        return l
     }
     var r = getPath(to.tooltipText)
     console.log(conn)
     console.log(r)
-    if (r[1] != undefined && (r[1] == r[2] || r[1] == -1 )) {
+    if (r == false) {
         // no path
-        return undefined;
+        return false;
     }
     r.push([conn[0].tooltipText, conn[3], conn[1]])
     return r

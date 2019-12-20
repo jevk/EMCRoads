@@ -4,7 +4,7 @@ function how_do_i_go() {
     var to   = document.getElementById("to"  ).value
     var l = pathfind(citiesL[from], citiesL[to])
     console.log(l)
-    if (l == undefined) {
+    if (l == false) {
         document.getElementById("result").innerText = "Path not found"
         document.getElementById("result").style.display = "block"
         return;
