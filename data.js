@@ -17,7 +17,11 @@ citiesD = [
     {"x": 13216.0, "y": -2750, "name": "Indian NH02-NH09 junction"},
     {"x": -15376.0, "y": -5480.0, "name": "USA #1 junction"},
     {"x": -15000.0, "y": -6942.0, "name": "USA #2 junction"},
+
     {"x": 1728.0, "y": -1728.0, "name": "Alpha"},
+    {"x": 1622.0, "y": -11410.0, "name": "Kristiania"},
+    {"x": 23792.0, "y": -12000.0, "name": "Isshin"},
+
     {"x": -12048.0, "y": 776, "name": "SA #1 junction"},
     {"x": -1936.0, "y": 904, "name": "Africa #1 junction"},
     {"x": -16, "y": 904, "name": "Africa #2 junction"},
@@ -31,7 +35,10 @@ citiesD = [
     {"x": -1936.0, "y": -2408, "name": "Africa #8 junction"}, 
     {"x": 4827.0, "y": -2408, "name": "Africa #9 junction"}, 
     {"x": 8802.0, "y": -1728, "name": "Africa #10 junction"}, 
+
     {"x": 21248.0, "y": -1728, "name": "Asia #1 junction"}, 
+    {"x": 650.0, "y": -11646, "name": "Asia #2 junction"}, 
+    {"x": 28480.0, "y": -11688, "name": "Asia #3 junction"},
 
 
     {"x": 4827.0, "y": -7960, "name": "Europe #1 junction"}, 
@@ -215,6 +222,16 @@ connections = {
         ["Asia #1 junction", "Africa #10 junction"],
         ["Asia #1 junction", "beijing"],
 
+
+        ["Utopia", "Olyokminsk"],
+        ["Utopia", "BunkerTown"],
+        ["Utopia", "Asia #2 junction"],
+        ["Utopia", "Isshin"],
+        ["Asia #3 junction", "Isshin"],
+        ["Asia #3 junction", "Anastoria"],
+        ["Asia #3 junction", "Rytkuchi"],
+        ["topRight", "Rytkuchi"],
+
         ["Amerindien", "Aruba"],
         ["Amerindien", "Maralago"],
         ["Amerindien", "Caribe Bay"],
@@ -239,6 +256,13 @@ connections = {
         ["Kanpur", "Tigers Nest", "Barbocity#8342"]
     ],
     "wip_nether_ice": [
+    ],
+    "walk": [
+        ["Hardanger", "Kristiania"],
+    ],
+    "nether_walk": [
+        ["Kristiania", "Asia #2 junction"],
+        ["Weezerville", "Asia #3 junction"],
     ]
 }
 
@@ -267,6 +291,8 @@ lineSeries = {
     "ice": chart.series.push(new am4maps.MapLineSeries()),
     "nether_ice": chart.series.push(new am4maps.MapLineSeries()),
     "wip_ice": chart.series.push(new am4maps.MapLineSeries()),
+    "walk": chart.series.push(new am4maps.MapLineSeries()),
+    "nether_walk": chart.series.push(new am4maps.MapLineSeries()),
 }
 
 lineAttrs = {
@@ -275,6 +301,12 @@ lineAttrs = {
     },
     "nether_ice": {
         stroke: "#FF0000"
+    },
+    "walk": {
+        stroke: "#FFFF00"
+    },
+    "nether_walk": {
+        stroke: "#FF8800"
     },
     "wip_ice": {
         stroke: "#286a91",
@@ -307,6 +339,7 @@ for (var i = 0; i < Object.keys(lineAttrs).length; i++) {
 }
 speedObj = {
     "walk": 4.3,
+    "nether_walk": 33,
     "train": 8,
     "nether_train": 64,
     "water": 8,
