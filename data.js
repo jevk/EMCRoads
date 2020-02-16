@@ -71,7 +71,7 @@ connections = {
 		
 		
 	],
-		"ice": [
+	"ice": [
 		["Southern Finland Junction", "Russia #1 junction"],
 		["Lahdenpohja", "FixedMines"],
 		// Western Russia Bridge
