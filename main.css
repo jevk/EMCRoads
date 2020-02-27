@@ -9,6 +9,9 @@ body {
   height: 100%;
   grid-template-areas: "chartdiv control-panel";
 }
+svg{
+    display: none;
+}
 
 #chartdiv { grid-area: chartdiv; }
 
