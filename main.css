@@ -13,7 +13,7 @@ body {
 #chartdiv { grid-area: chartdiv; }
 
 #control-panel { grid-area: control-panel;height: 100%; }
-
+.amcharts-chart-div a {display:none !important;}
 .path-item {
     margin: auto 2px auto 2px;
 }
