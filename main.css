@@ -1,14 +1,44 @@
-ain.css
-@@ -13,7 +13,7 @@ body {
+@@ -1,19 +1,19 @@
+html {
+    height: 100%;
+}
+body {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  grid-template-areas: "chartdiv control-panel";
+}
 #chartdiv { grid-area: chartdiv; }
 
 #control-panel { grid-area: control-panel;height: 100%; }
 
-
+.amcharts-chart-div a {display:none !important;}
 .path-item {
     margin: auto 2px auto 2px;
 }
-@@ -48,4 +48,4 @@ body {
+.background-path-line.nether_ice {
+    background-color: red;
+}
+.background-path-line.ice {
+    background-color: blue;
+}
+#control-show {
+    position: fixed;
+    right: 0px;
+}
+#control-hide {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+}
+#result {
+    display: grid;
+    grid-template-columns: 0.05fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: scroll;
+    text-overflow: scroll;
+    height: 100%;
 }
 
 .background-path-line {
