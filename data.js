@@ -255,7 +255,7 @@ connections = {
         ["Columbia", "Kansas City"],
         ["Columbia", "Praire Du Chen"],
 		//Western Europe
-		["Sussex", "Fallen Kingdom", "Saint-Brieuc"]
+		["Sussex", "Fallen Kingdom", "Saint-Brieuc"],
 
 
 
