@@ -1,86 +1,92 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
-
-</style>
-<meta charset="utf-8">
-<!-- Resources -->
-<script src="https://www.amcharts.com/lib/4/core.js"></script>
-<script src="https://www.amcharts.com/lib/4/maps.js"></script>
-<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
-<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="main.css">
-<script src="geodata.js"></script>
-<script src="mapSeries.js"></script>
-<script src="data.js"></script>
-<script src="pathfind.js"></script>
-<script src="howDoIGo.js"></script>
-<script>
-am4core.ready(function() {
-loadChart()
-loadData()
-Object.keys(connections).forEach(function(k, i) {
-    
-    for (let i = 0; i < connections[k].length; i++) {
-        p0 = citiesL[connections[k][i][0]]
-        p1 = citiesL[connections[k][i][1]]
-        if (p1 == undefined || p0 == undefined) {
-            console.log("Can't make " + connections[k][i][0] + " to " + connections[k][i][1])
-            continue
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
         }
-        addLine(p0, p1, k)
-    }
-});
+
+        .button2 {
+            background-color: #008CBA;
+        }
+        /* Blue */
+        .button3 {
+            background-color: #f44336;
+        }
+        /* Red */
+
+    </style>
+    <meta charset="utf-8">
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="geodata.js"></script>
+    <script src="mapSeries.js"></script>
+    <script src="data.js"></script>
+    <script src="pathfind.js"></script>
+    <script src="howDoIGo.js"></script>
+    <script>
+        am4core.ready(function () {
+            loadChart()
+            loadData()
+            Object.keys(connections).forEach(function (k, i) {
+
+                for (let i = 0; i < connections[k].length; i++) {
+                    p0 = citiesL[connections[k][i][0]]
+                    p1 = citiesL[connections[k][i][1]]
+                    if (p1 == undefined || p0 == undefined) {
+                        console.log("Can't make " + connections[k][i][0] + " to " + connections[k][i][1])
+                        continue
+                    }
+                    addLine(p0, p1, k)
+                }
+            });
 
 
-control_open()
-control_close()
-})
+            control_open()
+        })
 
-</script>
+    </script>
     <title>EarthMC Iceroad Map</title>
 </head>
 <body>
-<div id="chartdiv"></div>
-<div id="control-panel">
-    <div id="not-result">
-        <button class="button button2" onclick="control_close()" id="control-hide">Hide Pathfinder</button>
-        <input type="text" id="from" name="a" placeholder="Where are you?" list="city_list">
-        <br>
-        <input type="text" id="to"   name="b" placeholder="Where do you want to go?" list="city_list">
-        <datalist id="city_list"></datalist>
-        <br>
-        <button class="button" onclick="how_do_i_go()">Pathfind</button>
-        <button class="button button3" onclick="clear_path()">Clear</button>
+    <div id="chartdiv"></div>
+    <div id="control-panel">
+        <div id="not-result">
+            <button class="button button2" onclick="control_close()" id="control-hide">Hide Pathfinder</button>
+            <input type="text" id="from" name="a" placeholder="Where are you?" list="city_list">
+            <br>
+            <input type="text" id="to" name="b" placeholder="Where do you want to go?" list="city_list">
+            <datalist id="city_list"></datalist>
+            <br>
+            <button class="button" onclick="how_do_i_go()">Pathfind</button>
+            <button class="button button3" onclick="clear_path()">Clear</button>
+        </div>
+        <div id="result"></div>
     </div>
-    <div id="result"></div>
-</div>
-<button class="button button2" id="control-show" onclick="control_open()">Show Pathfinder</button>
+    <button class="button button2" id="control-show" onclick="control_open()">Show Pathfinder</button>
 </body>
+<script>control_close()</script>
 </html>
