@@ -5,7 +5,7 @@ function loadChart() {
     am4core.useTheme(am4themes_animated);
     // Themes end
 
-    MAP_SCALE = 3 / 550 
+    MAP_SCALE = 3 / 550
     // Create map instance
     chart = am4core.create("chartdiv", am4maps.MapChart);
     loadGeodata()
@@ -13,8 +13,8 @@ function loadChart() {
     chart.projection = new am4maps.projections.Projection();
     chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
-        latitude: 38,
-        longitude: -60
+        latitude: 0,
+        longitude: 0
     };
 
     // Create map polygon series
@@ -37,6 +37,25 @@ function loadChart() {
     console.log(chart.geodata["features"][28])
 
 
+
     chart.zoomControl = new am4maps.ZoomControl();
 
+    chart.events.on("hit", addroad_pick_pos)
+
+}
+
+
+function toggleDarkMode(element) {
+    if (element.checked) {
+        polygonSeries.mapPolygons.template.fill = am4core.color("#2e2c33")
+        polygonSeries.mapPolygons.each(e => e.fill = am4core.color("#2e2c33"))
+        $("body").addClass("dark-mode")
+    } else {
+        polygonSeries.mapPolygons.template.fill = chart.colors.getIndex(0).lighten(0.5)
+        polygonSeries.mapPolygons.each(e => e.fill = chart.colors.getIndex(0).lighten(0.5))
+        $("body").removeClass("dark-mode")
+    }
+
+    // this is the problem with js 
+    localStorage.darkMode = (element.checked == true || element.checked == "true")
 }

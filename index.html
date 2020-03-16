@@ -1,44 +1,15 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <style>
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
 
-        .button2 {
-            background-color: #008CBA;
-        }
-        /* Blue */
-        .button3 {
-            background-color: #f44336;
-        }
-        /* Red */
 
-    </style>
     <meta charset="utf-8">
     <!-- Resources -->
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/maps.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-
+    <script src="https://www.amcharts.com/lib/4/plugins/bullets.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -47,9 +18,12 @@
     <script src="data.js"></script>
     <script src="pathfind.js"></script>
     <script src="howDoIGo.js"></script>
+    <script src="addRoad.js"></script>
+    <script src="lines.js"></script>
     <script>
         am4core.ready(function () {
             loadChart()
+
             loadData()
             Object.keys(connections).forEach(function (k, i) {
 
@@ -62,31 +36,86 @@
                     }
                     addLine(p0, p1, k)
                 }
+
             });
 
 
-            control_open()
-        })
+            console.log($("#toggleDarkMode"))
 
+            if (localStorage.darkMode == "true") {
+                $("#toggleDarkMode")[0].checked = true
+            } else {
+                $("#toggleDarkMode")[0].checked = false
+
+            }
+
+            toggleDarkMode($("#toggleDarkMode")[0])
+
+        })
     </script>
-    <title>EarthMC Iceroad Map</title>
+    <title>EarthMC Ice Road Map</title>
 </head>
 <body>
+    <datalist id="city_list"></datalist>
+    <datalist id="all_city_list"></datalist>
     <div id="chartdiv"></div>
-    <div id="control-panel">
+    <div id="drag-thumb" draggable="true"></div>
+    <div id="control-panel" class="panel">
         <div id="not-result">
-            <button class="button button2" onclick="control_close()" id="control-hide">Hide Pathfinder</button>
-            <input type="text" id="from" name="a" placeholder="Where are you?" list="city_list">
+            <button onclick="control_close()" id="control-hide" class="hide-button">Hide</button>
+            <input type="text" id="from" name="" placeholder="Where are you?" list="city_list">
             <br>
-            <input type="text" id="to" name="b" placeholder="Where do you want to go?" list="city_list">
-            <datalist id="city_list"></datalist>
+            <input type="text" id="to" name="" placeholder="Where do you want to go?" list="city_list">
             <br>
-            <button class="button" onclick="how_do_i_go()">Pathfind</button>
-            <button class="button button3" onclick="clear_path()">Clear</button>
+            <button onclick="how_do_i_go()">Pathfind</button>
+            <button onclick="clear_path()">Clear</button>
         </div>
         <div id="result"></div>
     </div>
-    <button class="button button2" id="control-show" onclick="control_open()">Show Pathfinder</button>
+    <div id="legend-panel" class="panel">
+        <button onclick="legend_close()" id="legend-hide" class="hide-button">Hide</button>
+        <label for="toggleDarkMode">Dark mode</label>
+        <input id="toggleDarkMode" oninput="toggleDarkMode(this)" type="checkbox" autocomplete="off" />
+        <br>
+        <br>
+        <hr>
+        <div id="legend"></div>
+
+        <br>
+        Stars are towns where you can n spawn to and get to the ice road system<br /><hr />
+
+        Special thanks to indian7p for making the Indian map
+
+    </div>
+
+
+    <div id="addroad-panel" class="panel">
+        <button onclick="addroad_close()" id="addroad-hide" class="hide-button">Hide</button>
+            <label for="type">Type</label>
+            <select id="addroad-checkpoint-type">
+            </select>
+            <label>From</label>
+            <input id="addroad-checkpoint-start" type="" class="" list="all_city_list">
+            <button type="button" onclick="addroad_pick('#addroad-checkpoint-start')">Pick</button>
+            <br>
+            <label>To</label>
+            <input id="addroad-checkpoint-end" type="" class="" list="all_city_list">
+            <button type="button" onclick="addroad_pick('#addroad-checkpoint-end')">Pick</button>
+            <br>
+            <button type="button" onclick="addroad_add_checkpoint()">Add connection</button>
+
+            <br />
+            <br />
+            <br />
+            <ul id="addroad-checkpoints">
+            </ul>
+
+    </div>
+
+    <div id="show-buttons">
+        <button id="control-show" onclick="control_open()">Show control</button>
+        <button id="legend-show" onclick="legend_open()">Show info</button>
+        <button id="addroad-show" onclick="addroad_open()">Report missing iceroad</button>
+    </div>
 </body>
-<script>control_close()</script>
 </html>
