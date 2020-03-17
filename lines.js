@@ -3,13 +3,45 @@ extra_connections = {
 		['Tucupita', 'Marbella'],
 		['Tucupita', 'Georgetown'],
 		['TiananmenSquare', 'Tucupita'],
-		['Caracas', 'TiananmenSquare']
+		['Caracas', 'TiananmenSquare'],
+		['BlackFall', 'Visby'],
+		['BlackFall', 'Hiiumaa'],
+		['BlackFall', 'Arensburg'],
+		['Siauliai', 'Arensburg'],
+		['Siauliai', 'Rietavas'],
+		['Hiiumaa', 'Reval'],
+		['FixedMines', 'Reval'],
+		['FixedMines', 'Sillamae'],
+		["Kongsvinger", "Vasteras"],
+		['Sillamae', 'Tartu'],
+		["Sillamae", "St Petersburg"],
+		['Nya Asgard', 'Kongsvinger'],
+		["Nya Asgard", "Vasteras"],
+		['Nya Asgard', 'Visby'],
+		["Vasteras", "Dread-Fort"],
+		["Vasteras", "Longyearbyen"],
+		["Dread-Fort", "Dalarna"],
+		["Uppsala", "Vasteras"],
+		["Uppsala", "Dalarna"],
+		["Krolewiec", "klaipeda"],
+		["Siauliai", "klaipeda"],
+		["Siauliai", "Kaunas"],
+		["Jelgava", "Kaunas"],
+		["Jelgava", "Valga"],
+		["FixedMines", "Valga"],
+		["Christianssund", "Kongsvinger"],
+		["Christianssund", "Dragsness"],
+		["Visby", "Sealandria"],
+		["Blaskog", "Sealandria"],
 	],
 	'underground_blue_ice': [
 		['Helsinki', 'Lahdenpohja'],
 		['Helsinki', 'Jyvaskyla'],
 		['Helsinki', 'Joensuu'],
 		['Lahdenpohja', 'Jyvaskyla'],
+		["Helsinki", "Inari"],
+		["Lahdenpohja", "Turku"],
+		["Helsinki", "Impilahti"],
 
 	],
 	'blue_ice': [
@@ -44,19 +76,7 @@ extra_connections = {
 		['Summit Station', 'ritenbenk'],
 		['Summit Station', 'Narvik'],
 		['Summit Station', 'Tasiilaq'],
-		['Nya Asgard', 'Visby'],
-		['Nya Asgard', 'Dread-Fort'],
-		['Nya Asgard', 'Kongsvinger'],
 		['Hardanger', 'Kongsvinger'],
-		['BlackFall', 'Visby'],
-		['BlackFall', 'Hiiumaa'],
-		['BlackFall', 'Arensburg'],
-		['Jelgava', 'Arensburg'],
-		['Siauliai', 'Arensburg'],
-		['Siauliai', 'Rietavas'],
-		['Hiiumaa', 'Tallinn'],
-		['FixedMines', 'Tallinn'],
-		['FixedMines', 'Sillamae'],
 		['Doha Junction', 'East Muscat Junction'],
 		['Doha Junction', 'Houmt Souk'],
 		['Doha Junction', 'Pasargadae'],
@@ -297,7 +317,20 @@ extra_connections = {
 	'wip_ice': [
 		['QuinnLand', 'Sable', '☭ChristianRobloxManEcksdee☭#3728'],
 		['Kanpur', 'Tigers Nest', 'Barbocity#8342'],
-		['Weserbergland', 'Stuttgart']
+		['Weserbergland', 'Stuttgart'],
+		['BlackFall', 'Reval'],
+		['Reval', 'Tampere'],
+		['Tampere', 'Hautakyla'],
+		['Hautakyla', 'Dread-Fort'],
+		["joensuu", "Helsinki"],
+		["joensuu", "Nordic #2 junction"],
+		["Inari", "Nordic #2 junction"], 
+		["Nordic #2 junction", "Carlsberg"], 
+		["Vehnatila", "Carlsberg"],
+		["New Venice", "Turku"],
+		["Fort Millford", "Gayville"],
+		["Fort Millford", "Jyvaskyla"], 
+
 	],
 	'wip_nether_ice': [],
 	'walk': [
@@ -374,6 +407,10 @@ extra_cities = [{
 	'x': -13475.0,
 	'y': 12636.0,
 	'name': 'Hoth'
+}, { 
+	'x': 4790.0,
+	'y': -11592.0,
+	'name': 'Helsinki'
 }, {
 	'x': -11344.0,
 	'y': 9444.0,
@@ -659,33 +696,9 @@ extra_cities = [{
 	'y': -8000,
 	'name': 'Central Asia Sand Mine'
 }, {
-	'name': '__pos(7000,-1096)',
-	'x': 7000,
-	'y': -1096
-}, {
-	'name': '__pos(7000,-1720)',
-	'x': 7000,
-	'y': -1720
-}, {
-	'name': '__pos(7000,-1096)',
-	'x': 7000,
-	'y': -1096
-}, {
-	'name': '__pos(7000,-1720)',
-	'x': 7000,
-	'y': -1720
-}, {
-	'name': '__pos(7000,-1720)',
-	'x': 7000,
-	'y': -1720
-}, {
-	'name': '__pos(7000,-7640)',
-	'x': 7000,
-	'y': -7640
-}, {
-	'name': '__pos(7000,-1720)',
-	'x': 7000,
-	'y': -1720
+	"x": 3765.0,
+	"y": -11606.0,
+	"name": "New Venice"
 }, {
 	'name': '__pos(7000,-1096)',
 	'x': 7000,
@@ -714,50 +727,6 @@ extra_cities = [{
 	'name': '__pos(7000,-1720)',
 	'x': 7000,
 	'y': -1720
-}, {
-	'name': '__pos(632,-9000)',
-	'x': 632,
-	'y': -9000
-}, {
-	'name': '__pos(632,-9000)',
-	'x': 632,
-	'y': -9000
-}, {
-	'name': '__pos(632,-9000)',
-	'x': 632,
-	'y': -9000
-}, {
-	'name': '__pos(632,-9000)',
-	'x': 632,
-	'y': -9000
-}, {
-	'name': '__pos(632,-9400)',
-	'x': 632,
-	'y': -9400
-}, {
-	'name': '__pos(632,-9479)',
-	'x': 632,
-	'y': -9479
-}, {
-	'name': '__pos(632,-9400)',
-	'x': 632,
-	'y': -9400
-}, {
-	'name': '__pos(632,-9479)',
-	'x': 632,
-	'y': -9479
-}, {
-	'name': '__pos(623,-9479)',
-	'x': 623,
-	'y': -9479
-}, {
-	'name': '__pos(78,-9686)',
-	'x': 78,
-	'y': -9686
-}, {
-	'name': '__pos(78,-9686)',
-	'x': 78,
-	'y': -9686
 }, {
 	'name': '__pos(7000,-1096)',
 	'x': 7000,
@@ -830,70 +799,6 @@ extra_cities = [{
 	'name': '__pos(78,-9686)',
 	'x': 78,
 	'y': -9686
-}, {
-	'name': '__pos(632,-9000)',
-	'x': 632,
-	'y': -9000
-}, {
-	'name': '__pos(632,-8791)',
-	'x': 632,
-	'y': -8791
-}, {
-	'name': '__pos(632,-8300)',
-	'x': 632,
-	'y': -8300
-}, {
-	'name': '__pos(632,-8791)',
-	'x': 632,
-	'y': -8791
-}, {
-	'name': '__pos(632,-8300)',
-	'x': 632,
-	'y': -8300
-}, {
-	'name': '__pos(769,-8232)',
-	'x': 769,
-	'y': -8232
-}, {
-	'name': '__pos(769,-7600)',
-	'x': 769,
-	'y': -7600
-}, {
-	'name': '__pos(769,-8232)',
-	'x': 769,
-	'y': -8232
-}, {
-	'name': '__pos(769,-7600)',
-	'x': 769,
-	'y': -7600
-}, {
-	'name': '__pos(769,-7495)',
-	'x': 769,
-	'y': -7495
-}, {
-	'name': '__pos(565,-7470)',
-	'x': 565,
-	'y': -7470
-}, {
-	'name': '__pos(769,-7495)',
-	'x': 769,
-	'y': -7495
-}, {
-	'name': '__pos(565,-7470)',
-	'x': 565,
-	'y': -7470
-}, {
-	'name': '__pos(-77,-7300)',
-	'x': -77,
-	'y': -7300
-}, {
-	'name': '__pos(-313,-7338)',
-	'x': -313,
-	'y': -7338
-}, {
-	'name': '__pos(-77,-7300)',
-	'x': -77,
-	'y': -7300
 }, {
 	'name': '__pos(7000,-1096)',
 	'x': 7000,
@@ -1030,34 +935,6 @@ extra_cities = [{
 	'name': '__pos(-77,-7300)',
 	'x': -77,
 	'y': -7300
-}, {
-	'name': '__pos(-313,-7338)',
-	'x': -313,
-	'y': -7338
-}, {
-	'name': '__pos(-556,-7340)',
-	'x': -556,
-	'y': -7340
-}, {
-	'name': '__pos(-77,-7300)',
-	'x': -77,
-	'y': -7300
-}, {
-	'name': '__pos(769,-7495)',
-	'x': 769,
-	'y': -7495
-}, {
-	'name': '__pos(769,-7080)',
-	'x': 769,
-	'y': -7080
-}, {
-	'name': '__pos(769,-7080)',
-	'x': 769,
-	'y': -7080
-}, {
-	'name': '__pos(769,-7080)',
-	'x': 769,
-	'y': -7080
 }, {
 	'name': '__pos(7000,-1096)',
 	'x': 7000,
@@ -1222,62 +1099,6 @@ extra_cities = [{
 	'name': '__pos(769,-7080)',
 	'x': 769,
 	'y': -7080
-}, {
-	'name': '__pos(-11364,3406)',
-	'x': -11364,
-	'y': 3406
-}, {
-	'name': '__pos(-11364,3406)',
-	'x': -11364,
-	'y': 3406
-}, {
-	'name': '__pos(-12244,3406)',
-	'x': -12244,
-	'y': 3406
-}, {
-	'name': '__pos(-11364,3406)',
-	'x': -11364,
-	'y': 3406
-}, {
-	'name': '__pos(-12244,3406)',
-	'x': -12244,
-	'y': 3406
-}, {
-	'name': '__pos(-12244,3406)',
-	'x': -12244,
-	'y': 3406
-}, {
-	'name': '__pos(-13158,3406)',
-	'x': -13158,
-	'y': 3406
-}, {
-	'name': '__pos(-13158,3406)',
-	'x': -13158,
-	'y': 3406
-}, {
-	'name': '__pos(-10886,4468)',
-	'x': -10886,
-	'y': 4468
-}, {
-	'name': '__pos(-10886,4468)',
-	'x': -10886,
-	'y': 4468
-}, {
-	'name': '__pos(-10886,5000)',
-	'x': -10886,
-	'y': 5000
-}, {
-	'name': '__pos(-10886,4468)',
-	'x': -10886,
-	'y': 4468
-}, {
-	'name': '__pos(-10886,5000)',
-	'x': -10886,
-	'y': 5000
-}, {
-	'name': '__pos(-10886,5000)',
-	'x': -10886,
-	'y': 5000
 }, {
 	'name': '__pos(7000,-1096)',
 	'x': 7000,
@@ -2378,4 +2199,232 @@ extra_cities = [{
 	'name': '__pos(-10886,5000)',
 	'x': -10886,
 	'y': 5000
+}, {
+	'name': '__pos(7000,-1096)',
+	'x': 7000,
+	'y': -1096
+}, {
+	'name': '__pos(7000,-1720)',
+	'x': 7000,
+	'y': -1720
+}, {
+	'name': '__pos(7000,-1096)',
+	'x': 7000,
+	'y': -1096
+}, {
+	'name': '__pos(7000,-1720)',
+	'x': 7000,
+	'y': -1720
+}, {
+	'name': '__pos(7000,-1720)',
+	'x': 7000,
+	'y': -1720
+}, {
+	'name': '__pos(7000,-7640)',
+	'x': 7000,
+	'y': -7640
+}, {
+	'name': '__pos(7000,-1720)',
+	'x': 7000,
+	'y': -1720
+}, {
+	'name': '__pos(632,-9000)',
+	'x': 632,
+	'y': -9000
+}, {
+	'name': '__pos(632,-9000)',
+	'x': 632,
+	'y': -9000
+}, {
+	'name': '__pos(632,-9000)',
+	'x': 632,
+	'y': -9000
+}, {
+	'name': '__pos(632,-9000)',
+	'x': 632,
+	'y': -9000
+}, {
+	'name': '__pos(632,-9400)',
+	'x': 632,
+	'y': -9400
+}, {
+	'name': '__pos(632,-9479)',
+	'x': 632,
+	'y': -9479
+}, {
+	'name': '__pos(632,-9400)',
+	'x': 632,
+	'y': -9400
+}, {
+	'name': '__pos(632,-9479)',
+	'x': 632,
+	'y': -9479
+}, {
+	'name': '__pos(623,-9479)',
+	'x': 623,
+	'y': -9479
+}, {
+	'name': '__pos(78,-9686)',
+	'x': 78,
+	'y': -9686
+}, {
+	'name': '__pos(78,-9686)',
+	'x': 78,
+	'y': -9686
+}, {
+	'name': '__pos(632,-9000)',
+	'x': 632,
+	'y': -9000
+}, {
+	'name': '__pos(632,-8791)',
+	'x': 632,
+	'y': -8791
+}, {
+	'name': '__pos(632,-8300)',
+	'x': 632,
+	'y': -8300
+}, {
+	'name': '__pos(632,-8791)',
+	'x': 632,
+	'y': -8791
+}, {
+	'name': '__pos(632,-8300)',
+	'x': 632,
+	'y': -8300
+}, {
+	'name': '__pos(769,-8232)',
+	'x': 769,
+	'y': -8232
+}, {
+	'name': '__pos(769,-7600)',
+	'x': 769,
+	'y': -7600
+}, {
+	'name': '__pos(769,-8232)',
+	'x': 769,
+	'y': -8232
+}, {
+	'name': '__pos(769,-7600)',
+	'x': 769,
+	'y': -7600
+}, {
+	'name': '__pos(769,-7495)',
+	'x': 769,
+	'y': -7495
+}, {
+	'name': '__pos(565,-7470)',
+	'x': 565,
+	'y': -7470
+}, {
+	'name': '__pos(769,-7495)',
+	'x': 769,
+	'y': -7495
+}, {
+	'name': '__pos(565,-7470)',
+	'x': 565,
+	'y': -7470
+}, {
+	'name': '__pos(-77,-7300)',
+	'x': -77,
+	'y': -7300
+}, {
+	'name': '__pos(-313,-7338)',
+	'x': -313,
+	'y': -7338
+}, {
+	'name': '__pos(-77,-7300)',
+	'x': -77,
+	'y': -7300
+}, {
+	'name': '__pos(-313,-7338)',
+	'x': -313,
+	'y': -7338
+}, {
+	'name': '__pos(-556,-7340)',
+	'x': -556,
+	'y': -7340
+}, {
+	'name': '__pos(-77,-7300)',
+	'x': -77,
+	'y': -7300
+}, {
+	'name': '__pos(769,-7495)',
+	'x': 769,
+	'y': -7495
+}, {
+	'name': '__pos(769,-7080)',
+	'x': 769,
+	'y': -7080
+}, {
+	'name': '__pos(769,-7080)',
+	'x': 769,
+	'y': -7080
+}, {
+	'name': '__pos(769,-7080)',
+	'x': 769,
+	'y': -7080
+}, {
+	'name': '__pos(-11364,3406)',
+	'x': -11364,
+	'y': 3406
+}, {
+	'name': '__pos(-11364,3406)',
+	'x': -11364,
+	'y': 3406
+}, {
+	'name': '__pos(-12244,3406)',
+	'x': -12244,
+	'y': 3406
+}, {
+	'name': '__pos(-11364,3406)',
+	'x': -11364,
+	'y': 3406
+}, {
+	'name': '__pos(-12244,3406)',
+	'x': -12244,
+	'y': 3406
+}, {
+	'name': '__pos(-12244,3406)',
+	'x': -12244,
+	'y': 3406
+}, {
+	'name': '__pos(-13158,3406)',
+	'x': -13158,
+	'y': 3406
+}, {
+	'name': '__pos(-13158,3406)',
+	'x': -13158,
+	'y': 3406
+}, {
+	'name': '__pos(-10886,4468)',
+	'x': -10886,
+	'y': 4468
+}, {
+	'name': '__pos(-10886,4468)',
+	'x': -10886,
+	'y': 4468
+}, {
+	'name': '__pos(-10886,5000)',
+	'x': -10886,
+	'y': 5000
+}, {
+	'name': '__pos(-10886,4468)',
+	'x': -10886,
+	'y': 4468
+}, {
+	'name': '__pos(-10886,5000)',
+	'x': -10886,
+	'y': 5000
+}, {
+	'name': '__pos(-10886,5000)',
+	'x': -10886,
+	'y': 5000
+}, {
+	'name': 'Nordic #2 junction',
+	'x': 4860.0,
+	'y': -12310.0
+}, {
+	'name': 'Nordic #1 junction',
+	'x': 5435.0,
+	'y': -11426.0
 }]
