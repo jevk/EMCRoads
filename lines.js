@@ -319,8 +319,6 @@ extra_connections = {
 		['Kanpur', 'Tigers Nest', 'Barbocity#8342'],
 		['Weserbergland', 'Stuttgart'],
 		['BlackFall', 'Reval'],
-		['Reval', 'Tampere'],
-		['Tampere', 'Hautakyla'],
 		['Hautakyla', 'Dread-Fort'],
 		["joensuu", "Helsinki"],
 		["joensuu", "Nordic #2 junction"],
