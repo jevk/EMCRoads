@@ -50,6 +50,53 @@ extra_connections = {
 	],
 	'nether_blue_ice': [],
 	'ice': [
+		// Spain and Portugal
+		['EU-US #2 junction', 'Cervo'],
+		['Sanabria', 'Cervo'],
+		['Sanabria', 'Galiza'],
+		['Sanabria', 'Viseu'],
+		['Sanabria', 'Porto'],
+		['Burgos', 'Viseu'],
+		['Burgos', 'Soria'],
+		['Burgos', 'Bilbao'],
+		['Soria', 'Bilbao'],
+		['Soria', 'Zaragoza'],
+		['Zaragoza', 'Madrid'],
+		['Zaragoza', 'Cuenca'],
+		['vigo', 'Galiza'],
+		['Cordoba', 'Villalba'],
+		['Cordoba', 'Madrid'],
+		['Sevilla', 'Spain #2 junction'],
+		['Sevilla', 'Spain #1 junction'],
+		['Sevilla', 'Osuna'],
+		['Sevilla', 'Cadiz liberal'],
+		['Porto', 'Spain #1 junction'],
+		['Spain #2 junction', 'Spain #1 junction'],
+		['Spain #2 junction', 'Spain #3 junction'],
+		['Spain #2 junction', 'Caceres'],
+		['Spain #2 junction', 'Salamanca'],
+		['Spain #3 junction', 'Cordoba'],
+
+		["EU-US #1 junction", "EU-US #2 junction"],
+		["EU-US #1 junction", "Brest"],
+		['EU-US #2 junction', 'pee pee island'],
+
+		['Armenia', 'Knights Templar'],
+		['Knights Templar', 'Tel Zion'],
+		['Tel Zion', 'Northern Africa #1 junction'],
+		['Northern Africa #2 junction', 'Northern Africa #1 junction'],
+		['Northern Africa #2 junction', 'Northern Africa #3 junction'],
+		['Northern Africa #3 junction', 'Cyrene'],
+		['Northern Africa #3 junction', 'Northern Africa #4 junction'],
+		['Northern Africa #4 junction', 'Cyrene'],
+		['Northern Africa #4 junction', 'Northern Africa #5 junction'],
+		['Northern Africa #5 junction', 'Surt'],
+		['Northern Africa #5 junction', 'Hydruntum'],
+		['Northern Africa #5 junction', 'Northern Africa #6 junction'],
+		['Northern Africa #6 junction', 'Misrata'],
+		['Northern Africa #6 junction', 'La Valetta'],
+		['Northern Africa #6 junction', 'Tripoli'],
+
 		['Falklands', 'Buenos Aires'],
 		['Santiago', 'Buenos Aires'],
 		['Resistencia', 'Buenos Aires'],
@@ -69,7 +116,6 @@ extra_connections = {
 		['Europe #4 junction', 'Saint-Brieuc'],
 		['Europe #4 junction', 'Angers'],
 		['Nantes', 'Angers'],
-		['New York', 'Wales'],
 		['New York', 'Chicago'],
 		['Summit Station', 'LE2CASSETOUTcity'],
 		['Summit Station', 'FortIce'],
@@ -198,7 +244,7 @@ extra_connections = {
 		['__pos(-12244,3406)', 'LaPaz'],
 		['__pos(-12244,3406)', '__pos(-11364,3406)'],
 		['Manna', '__pos(-11364,3406)'],
-		['SantaCruz Sierra', '__pos(-11364,3406)']
+		['SantaCruz Sierra', '__pos(-11364,3406)'],
 	],
 	'reliance_industries': [
 		['Ahmedabad [HUB]', 'Mumbai'],
@@ -341,7 +387,10 @@ extra_connections = {
 		['New York', 'Dorchester'],
 		['Europe #4 junction', 'Paris'],
 		['Paris', 'Reims'],
-		['Rio de Janeiro', 'San Paulo']
+		['Rio de Janeiro', 'San Paulo'],
+		["Saint-Brieuc", "Brest"],
+		['Faro', 'Lisbon'],
+		['Faro', 'Evora'],
 	],
 	'nether_walk': [
 		['Kristiania', 'Asia #2 junction'],
@@ -378,13 +427,58 @@ extra_connections = {
 		['karachi', 'Natal'],
 		['Vitria', 'Natal'],
 		['Vitria', 'prado'],
-		['Rio De Janeiro', 'prado']
+		['Rio De Janeiro', 'prado'],
 	]
 };
 extra_cities = [{
+	'x': 5238.0,
+	'y': -6251.0,
+	'name': 'Northern Africa #1 junction'
+}, {
+	'x': 4432.0,
+	'y': -6251.0,
+	'name': 'Northern Africa #2 junction'
+}, {
+	'x': 4037.0,
+	'y': -6251.0,
+	'name': 'Northern Africa #3 junction'
+}, {
+	'x': 3517.0,
+	'y': -6251.0,
+	'name': 'Northern Africa #4 junction'
+}, {
+	'x': 2965.0,
+	'y': -6251.0,
+	'name': 'Northern Africa #5 junction'
+}, {
+	'x': 2582.0,
+	'y': -6251.0,
+	'name': 'Northern Africa #6 junction'
+}, {
+	// Spain and Portugal
+	'x': -1492.0,
+	'y': -7513.0,
+	'name': 'Spain #1 junction'
+}, {
+	'x': -1435.0,
+	'y': -7513.0,
+	'name': 'Spain #2 junction'
+}, {
+	'x': -1355.0,
+	'y': -7513.0,
+	'name': 'Spain #3 junction'
+}, {
 	'x': -15376.0,
 	'y': -5480.0,
 	'name': 'USA #1 junction'
+}, {
+	"x": -1088.0,
+	"y": -9120.0,
+	"name": 'Brest'
+}, {
+	'x': -1723.0,
+	'y': -8835.0,
+	'name': 'EU-US #2 junction'
 }, {
 	'x': -1723.0,
 	'y': -9002.0,
