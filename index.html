@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="utf-8">
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/bullets.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="geodata.js"></script>
+    <script src="mapSeries.js"></script>
+    <script src="data.js"></script>
+    <script src="pathfind.js"></script>
+    <script src="howDoIGo.js"></script>
+    <script src="addRoad.js"></script>
+    <script src="lines.js"></script>
+    <script>
+        am4core.ready(function () {
+            loadChart()
+
+            loadData()
+            Object.keys(connections).forEach(function (k, i) {
+
+                for (let i = 0; i < connections[k].length; i++) {
+                    p0 = citiesL[connections[k][i][0]]
+                    p1 = citiesL[connections[k][i][1]]
+                    if (p1 == undefined || p0 == undefined) {
+                        console.log("Can't make " + connections[k][i][0] + " to " + connections[k][i][1])
+                        continue
+                    }
+                    addLine(p0, p1, k)
+                }
+
+            });
+
+
+            console.log($("#toggleDarkMode"))
+
+            if (localStorage.darkMode == "true") {
+                $("#toggleDarkMode")[0].checked = true
+            } else {
+                $("#toggleDarkMode")[0].checked = false
+
+            }
+
+            toggleDarkMode($("#toggleDarkMode")[0])
+
+        })
+    </script>
+    <title>EarthMC Ice Road Map</title>
+</head>
+<body>
+    <datalist id="city_list"></datalist>
+    <datalist id="all_city_list"></datalist>
+    <div id="chartdiv"></div>
+    <div id="drag-thumb" draggable="true"></div>
+    <div id="control-panel" class="panel">
+        <div id="not-result">
+            <button onclick="control_close()" id="control-hide" class="hide-button">Hide</button>
+            <input type="text" id="from" name="" placeholder="Where are you?" list="city_list">
+            <br>
+            <input type="text" id="to" name="" placeholder="Where do you want to go?" list="city_list">
+            <br>
+            <button onclick="how_do_i_go()">Pathfind</button>
+            <button onclick="clear_path()">Clear</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <div id="legend-panel" class="panel">
+        <button onclick="legend_close()" id="legend-hide" class="hide-button">Hide</button>
+        <label for="toggleDarkMode">Dark mode</label>
+        <input id="toggleDarkMode" oninput="toggleDarkMode(this)" type="checkbox" autocomplete="off" />
+        <br>
+        <br>
+        <hr>
+        <div id="legend"></div>
+
+        <br>
+        Stars are towns where you can n spawn to and get to the ice road system<br /><hr />
+
+        Special thanks to indian7p for making the Indian map
+<<<<<<< HEAD
+        <br>
+        visits
+        <div></div>
+        <!-- hitwebcounter Code START -->
+        <a href="https://www.hitwebcounter.com" target="_blank">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=7278193&style=0007&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count"   border="0" >
+        </a>        
+=======
+>>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
+        <br><br>
+
+    </div>
+
+
+    <div id="addroad-panel" class="panel">
+        <button onclick="addroad_close()" id="addroad-hide" class="hide-button">Hide</button>
+            <label for="type">Type</label>
+            <select id="addroad-checkpoint-type">
+            </select>
+            <label>From</label>
+            <input id="addroad-checkpoint-start" type="" class="" list="all_city_list">
+            <button type="button" onclick="addroad_pick('#addroad-checkpoint-start')">Pick</button>
+            <br>
+            <label>To</label>
+            <input id="addroad-checkpoint-end" type="" class="" list="all_city_list">
+            <button type="button" onclick="addroad_pick('#addroad-checkpoint-end')">Pick</button>
+            <br>
+            <button type="button" onclick="addroad_add_checkpoint()">Add connection</button>
+
+            <br />
+            <br />
+            <br />
+            <ul id="addroad-checkpoints">
+            </ul>
+
+    </div>
+
+    <div id="show-buttons">
+        <button id="control-show" onclick="control_open()">Show pathfinder</button>
+        <button id="legend-show" onclick="legend_open()">Show info</button>
+        <button id="addroad-show" onclick="addroad_open()">Add a road</button>
+    </div>
+</body>
+</html>
