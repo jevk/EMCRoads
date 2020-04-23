@@ -1,50 +1,77 @@
 html {
     height: 100%;
+    overflow: hidden;
+}
+
+body.dark-mode {
+    background-color: rgb(90, 89, 92);
+    color: rgb(48, 47, 48);
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  grid-template-rows: 1fr;
-  height: 100%;
-  grid-template-areas: "chartdiv control-panel";
+    display: grid;
+    grid-template-columns: 2.0fr 0fr; /*grid-template-columns: 1.2fr 0.8fr;*/
+    grid-template-rows: 1fr;
+    height: 100%;
+    grid-template-areas: "chartdiv control-panel";
 }
 
-#chartdiv { grid-area: chartdiv; }
+.dark-mode button, .dark-mode .buttonlike, .dark-mode input, .dark-mode select {
+    color: rgb(150, 146, 155);
+    background: rgb(49, 44, 52);
+    border: 1px solid rgb(66, 57, 77);
+    padding: 0px 8px 0px 8px;
+    margin: 5px;
+}
 
-#control-panel { grid-area: control-panel;height: 100%; }
+
+    .dark-mode button:hover, .dark-mode .buttonlike:hover {
+        background-color: rgba(196, 196, 196, 0.50);
+        color: white;
+    }
+
+#chartdiv {
+    grid-area: chartdiv;
+}
+
+.panel {
+    grid-area: control-panel;
+    height: 100%;
+    display: none;
+    margin: 10px;
+    overflow: scroll;
+    min-width: 300px;
+    height: 100%;
+}
+
+#legend-panel {
+    min-width: 200px;
+}
+
+#legend {
+    line-height: 1.6em;
+}
 
 .path-item {
     margin: auto 2px auto 2px;
 }
-.background-path-line.nether_ice {
-    background-color: red;
-}
 
-.background-path-line.ice {
-    background-color: blue;
 
-}
-
-#control-show {
+#show-buttons {
     position: fixed;
     right: 0px;
 }
 
-#control-hide {
+.hide-button {
     position: relative;
     float: right;
     margin-right: 10px;
 }
 
 #result {
-
     display: grid;
     grid-template-columns: 0.05fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    overflow: scroll;
-    text-overflow: scroll;
-    height: 100%;
 }
 
 .background-path-line {
