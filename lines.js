@@ -91,6 +91,7 @@ extra_connections = {
 		// Southern Europe
 		['Rome', 'Southern Europe #1 junction'],
 		['Southern Europe #2 junction', 'Southern Europe #1 junction'],
+		['Southern Europe #2 junction', 'Northern Africa #9 junction'],
 
 		// Northern Africa
 		['Armenia', 'Knights Templar'],
