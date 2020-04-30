@@ -50,7 +50,6 @@ extra_connections = {
 	],
 	'nether_blue_ice': [],
 	'ice': [
-<<<<<<< HEAD
 		// Western Russia
 		['Western Russia #1 junction', 'Western Russia #2 junction'],
 		['Western Russia #1 junction', 'jastronia'],
@@ -58,8 +57,6 @@ extra_connections = {
 		['Western Russia #2 junction', 'Lake Ladoga'],
 		['Western Russia #3 junction', 'Lake Ladoga'],
 		['Western Russia #3 junction', 'Western Russia #4 junction'],
-=======
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 		// Spain and Portugal
 		['EU-US #2 junction', 'Cervo'],
 		['Sanabria', 'Cervo'],
@@ -91,15 +88,12 @@ extra_connections = {
 		["EU-US #1 junction", "Brest"],
 		['EU-US #2 junction', 'pee pee island'],
 
-<<<<<<< HEAD
 		// Southern Europe
 		['Rome', 'Southern Europe #1 junction'],
 		['Southern Europe #2 junction', 'Southern Europe #1 junction'],
 		['Southern Europe #2 junction', 'Northern Africa #9 junction'],
 
 		// Northern Africa
-=======
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 		['Armenia', 'Knights Templar'],
 		['Knights Templar', 'Tel Zion'],
 		['Tel Zion', 'Northern Africa #1 junction'],
@@ -115,7 +109,6 @@ extra_connections = {
 		['Northern Africa #6 junction', 'Misrata'],
 		['Northern Africa #6 junction', 'La Valetta'],
 		['Northern Africa #6 junction', 'Tripoli'],
-<<<<<<< HEAD
 		['Northern Africa #7 junction', 'Tripoli'],
 		['Northern Africa #7 junction', 'Safakis'],
 		['Northern Africa #7 junction', 'Northern Africa #8 junction'],
@@ -123,8 +116,6 @@ extra_connections = {
 		
 		['Northern Africa #8 junction', 'San Cataldo'],
 		['Northern Africa #9 junction', 'Palermo'],
-=======
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 
 		['Falklands', 'Buenos Aires'],
 		['Santiago', 'Buenos Aires'],
@@ -253,19 +244,8 @@ extra_connections = {
 		['__pos(-313,-7338)', '__pos(-77,-7300)'],
 		['__pos(-77,-7300)', 'Baleares'],
 		['__pos(565,-7470)', 'Baleares'],
-<<<<<<< HEAD
 		['__pos(632,-8300)', '__pos(632,-8791)'],
 		['__pos(632,-9000)', '__pos(632,-8791)'],
-=======
-		['__pos(565,-7470)', '__pos(769,-7495)'],
-		['__pos(769,-7600)', '__pos(769,-7495)'],
-		['__pos(769,-7600)', '__pos(769,-8232)'],
-		['__pos(632,-8300)', '__pos(769,-8232)'],
-		['__pos(632,-8300)', '__pos(632,-8791)'],
-		['__pos(632,-9000)', '__pos(632,-8791)'],
-		['Palermo', '__pos(769,-7080)'],
-		['Serravalle', '__pos(769,-7080)'],
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 		['__pos(769,-7495)', '__pos(769,-7080)'],
 		['__pos(-77,-7300)', 'Algiers'],
 		['__pos(-10886,5000)', 'Resistencia'],
@@ -407,12 +387,8 @@ extra_connections = {
 		["Vehnatila", "Carlsberg"],
 		["New Venice", "Turku"],
 		["Fort Millford", "Gayville"],
-<<<<<<< HEAD
 		["Fort Millford", "Jyvaskyla"],
 		["New Venice", "Vaasa"],
-=======
-		["Fort Millford", "Jyvaskyla"], 
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 
 	],
 	'wip_nether_ice': [],
@@ -470,7 +446,6 @@ extra_connections = {
 	]
 };
 extra_cities = [{
-<<<<<<< HEAD
 	//Russia
 
 	'x': 5878.0,
@@ -503,8 +478,6 @@ extra_cities = [{
 
 	// Africa
 
-=======
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 	'x': 5238.0,
 	'y': -6251.0,
 	'name': 'Northern Africa #1 junction'
@@ -529,7 +502,6 @@ extra_cities = [{
 	'y': -6251.0,
 	'name': 'Northern Africa #6 junction'
 }, {
-<<<<<<< HEAD
 	'x': 1990.0,
 	'y': -6640.0,
 	'name': 'Northern Africa #7 junction'
@@ -542,8 +514,6 @@ extra_cities = [{
 	'y': -7090.0,
 	'name': 'Northern Africa #9 junction'
 }, {
-=======
->>>>>>> 8c2e8ebdc16021f53e59253c1223b3e94b9db98f
 	// Spain and Portugal
 	'x': -1492.0,
 	'y': -7513.0,
